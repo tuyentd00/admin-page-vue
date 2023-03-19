@@ -1,14 +1,20 @@
 <template>
-   <template>
-    
-   </template>
+  <div id="click">
+<h1>{{ msg }}</h1>
+<button @click="count+=2">You clicked me {{ count }} times.</button>
+<h1>{{count}}</h1>
+  </div>
 </template>
 
 <script>
+
 export default {
   name: 'HelloWorld',
+  data(){
+    return { count: 0}
+  },
   props: {
-    msg: String
+    msg: String,
   }
 }
 </script>
